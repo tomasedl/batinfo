@@ -1,0 +1,9 @@
+#!/bin/bash
+# script for saving information about battery to file /home/tomass/batinfo
+
+FILE="/home/tomass/batinfo"
+
+date >> $FILE
+echo "----------------------------" >> $FILE
+upower -i /org/freedesktop/UPower/devices/battery_BAT0 >> $FILE
+echo "------------------------------------------------------------------------" >> $FILE
